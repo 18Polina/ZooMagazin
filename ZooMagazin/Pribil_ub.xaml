@@ -1,0 +1,50 @@
+﻿<Window x:Class="ZooMagazin.Pribil_ub"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ZooMagazin"
+        mc:Ignorable="d"
+        Title="Delivery contract" Loaded="Window_Loaded" Height="450" Width="800" WindowState="Maximized" WindowStyle="None"  Background="#C2CBDE">
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Label  Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Right" Height="50" Content="Отчет о прибыли и убытках организации" FontSize="20" Width="400" Foreground="Black" />
+
+        <DatePicker   VerticalAlignment="Top" Name="Data" Grid.Row="1" Height="30" Width="400"   />
+        <TextBox Grid.Row="1" Text="Фамилия сотрудника" TextAlignment="Center"   VerticalAlignment="Bottom" Name="Surname" Height="30" Width="400" />
+        <TextBox Grid.Row="2" MaxLength="7" Text="Стоимость прибыли" TextAlignment="Center"   VerticalAlignment="Center" Name="SalaryPrib" Height="30" Width="400" />
+        <TextBox Grid.Row="3" VerticalAlignment="Top" Text="Период"  TextAlignment="Center" Name="Period" Height="30" Width="400"  />
+        <TextBox Grid.Row="3" MaxLength="7"  Text="Стоимость убытка" TextAlignment="Center"  VerticalAlignment="Bottom" Name="SalaryUb" Height="30" Width="400" />
+
+        <TextBox Width="150" Height="24" Grid.Column="3" HorizontalAlignment="Left" VerticalAlignment="Bottom"  Name="Poisk"/>
+        <Button Width="200" Height="24" Content="Поиск" Grid.Column="3" HorizontalAlignment="Right" VerticalAlignment="Bottom" Background="#6E7F80" Click="Button_Click" Foreground="White"/>
+
+        <Button Width="200" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" Content="Назад" Margin="20,10,0,0"  Background="#6E7F80" Click="Button_Click_1"  Grid.Row="0"/>
+
+        <Button Height="40" Width="400" VerticalAlignment="Bottom" Foreground="White" Content="Добавить"  Background="#6E7F80" Click="Button_Click_2"  Grid.Row="4" />
+
+        <Button Height="40" Width="400" Grid.RowSpan="2"  VerticalAlignment="Center" Foreground="White" Content="Изменить"  Background="#6E7F80" Click="Button_Click_3"  Grid.Row="4" />
+
+        <DataGrid Grid.Column="2" Name="DataGrid" Grid.RowSpan="5" Grid.Row="1" SelectedCellsChanged="DataGrid_SelectedCellsChanged" Width="530" />
+
+        <Button Height="40" Width="400" VerticalAlignment="Center" Foreground="White" Content="Удалить"  Background="#6E7F80" Click="Button_Click_4"  Grid.Row="5" />
+
+        <Button Height="40" Width="400" VerticalAlignment="Bottom" Foreground="White" Content="Экспорт"  Background="#6E7F80" Click="Button_Click_5"  Grid.Row="5" />
+
+    </Grid>
+</Window>
